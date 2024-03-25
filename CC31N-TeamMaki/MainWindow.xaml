@@ -22,7 +22,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Win10\Documents\CC3\Engine\Images\Background\game background 1.jpeg" 
+            <ImageBrush ImageSource="C:\Users\Win10\Documents\CC3\CC31N- TeamMaki-wpf\Engine\Images\Background\game background 1.jpeg" 
                         Stretch="UniformToFill"/>
 
         </Grid.Background>
@@ -81,7 +81,7 @@
                     VerticalAlignment="Center"
                     Height="150"
                     Width="126"
-                    Source="C:\Users\Win10\Documents\CC3\Engine\Images\Characters\Auswi.png" Stretch="UniformToFill" />
+                    Source="C:\Users\Win10\Documents\CC3\CC31N- TeamMaki-wpf\Engine\Images\Characters\Auswi.png" />
                 <Border BorderBrush="LightGray" BorderThickness="1" Margin="2"/>
                 <Label Grid.Row="0" Grid.Column="0"  Content="Player Image"/>
                 
