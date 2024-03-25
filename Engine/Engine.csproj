@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Background\game background 1.jpeg" />
+    <None Remove="Images\Characters\Auswi.png" />
+    <None Remove="Images\Locations\CropFarm.png" />
+    <None Remove="Images\Locations\ElderPeaks.png" />
+    <None Remove="Images\Locations\Guild.png" />
+    <None Remove="Images\Locations\HavenVillage.png" />
+    <None Remove="Images\Locations\KapsVillage.png" />
+    <None Remove="Images\Locations\MarketPlace.jpg" />
+    <None Remove="Images\Locations\Marshlands.png" />
+    <None Remove="Images\Locations\ShadowForest.png" />
+    <None Remove="Images\Locations\WickedForest.png" />
+    <None Remove="Images\GameItems\dagger.png" />
+    <None Remove="Images\GameItems\iron axe.png" />
+    <None Remove="Images\GameItems\iron spear.png" />
+    <None Remove="Images\GameItems\iron sword.png" />
+    <None Remove="Images\GameItems\wooden bow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Background\game background 1.jpeg" />
+    <Resource Include="Images\Characters\Auswi.png" />
+    <Resource Include="Images\Locations\CropFarm.png" />
+    <Resource Include="Images\Locations\ElderPeaks.png" />
+    <Resource Include="Images\Locations\Guild.png" />
+    <Resource Include="Images\Locations\HavenVillage.png" />
+    <Resource Include="Images\Locations\KapsVillage.png" />
+    <Resource Include="Images\Locations\MarketPlace.jpg" />
+    <Resource Include="Images\Locations\Marshlands.png" />
+    <Resource Include="Images\Locations\ShadowForest.png" />
+    <Resource Include="Images\Locations\WickedForest.png" />
+    <Resource Include="Images\GameItems\dagger.png" />
+    <Resource Include="Images\GameItems\iron axe.png" />
+    <Resource Include="Images\GameItems\iron spear.png" />
+    <Resource Include="Images\GameItems\iron sword.png" />
+    <Resource Include="Images\GameItems\wooden bow.png" />
+  </ItemGroup>
+
+</Project>
