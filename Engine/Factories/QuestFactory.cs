@@ -18,7 +18,7 @@ namespace Engine.Factories
                 {
                     ID = 1,
                     Name = "Quest from the Mayor of Kaps Village",
-                    Description =" Slay 3 goblins in the Wicked Forest.",
+                    Description =" Slay 3 Goblins in the Wicked Forest.",
                     ItemsToComplete = new List<ItemQuantity>
                     {
                         new ItemQuantity {},
@@ -29,13 +29,16 @@ namespace Engine.Factories
                     Gold = 30,
                     RewardItems = new List<ItemQuantity>
                     {
-                        new ItemQuantity {}
+                        new ItemQuantity {ItemID = 103, Quantity = 1},
+                        new ItemQuantity {ItemID = 1001, Quantity = 1}
+
                     }
-                }, new Quest
+                }, 
+                new Quest
                 {
                     ID = 2,
                     Name = "Quests from Guild Dulenar",
-                    Description =" ",
+                    Description =" Slay 5 Goblins and 5 Ghouls",
                     ItemsToComplete = new List<ItemQuantity>
                     {
                         new ItemQuantity {},
@@ -43,14 +46,37 @@ namespace Engine.Factories
                    
                     },
                     ExpPoints = 100,
-                    Gold = 30,
+                    Gold = 50,
                     RewardItems = new List<ItemQuantity>
                     {
-                        new ItemQuantity {}
+                         new ItemQuantity {ItemID = 102, Quantity = 1},
+                        new ItemQuantity {ItemID = 1002, Quantity = 1}                     
                     }
-                }, new Quest
+                    
+                },  new Quest
                 {
                     ID = 3,
+                    Name = "Quests from Guild Dulenar 2",
+                    Description ="Slay 2 Giants and 2 Witches ",
+                    ItemsToComplete = new List<ItemQuantity>
+                    {
+                        new ItemQuantity {},
+                        new ItemQuantity {}
+                   
+                    },
+                    ExpPoints = 100,
+                    Gold = 80,
+                    RewardItems = new List<ItemQuantity>
+                    {
+                        new ItemQuantity { ItemID = 105, Quantity =1},
+                        new ItemQuantity { ItemID = 1003, Quantity =1},
+
+                    }
+                    
+                }, 
+                new Quest
+                {
+                    ID = 4,
                     Name = "Quest from the Farmer in Haven Village",
                     Description ="Slay goblins and orcs destroying the crops. ",
                     ItemsToComplete = new List<ItemQuantity>
@@ -60,10 +86,11 @@ namespace Engine.Factories
                    
                     },
                     ExpPoints = 100,
-                    Gold = 30,
+                    Gold = 80,
                     RewardItems = new List<ItemQuantity>
                     {
-                        new ItemQuantity {}
+                        new ItemQuantity {ItemID = 101, Quantity = 1},
+                        new ItemQuantity {ItemID = 1004, Quantity = 1},
                     }
                 },
             };
@@ -71,7 +98,7 @@ namespace Engine.Factories
         }
          public static Quest GetQuestID (int questID)
         {
-            return _quest.Find(q => q.ID == questID);
+            return _quest.Find(qi => qi.ID == questID);
         }
     }
 }

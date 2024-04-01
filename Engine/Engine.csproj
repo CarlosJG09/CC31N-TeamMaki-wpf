@@ -7,8 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Font\pixeled.ttf" />
     <None Remove="Images\Background\game background 1.jpeg" />
     <None Remove="Images\Characters\Auswi.png" />
+    <None Remove="Images\GameItems\img_boots.png" />
+    <None Remove="Images\GameItems\img_chestplate.png" />
+    <None Remove="Images\GameItems\img_chestplate.webp" />
+    <None Remove="Images\GameItems\img_gloves.png" />
+    <None Remove="Images\GameItems\img_helmet.png" />
     <None Remove="Images\Locations\CropFarm.png" />
     <None Remove="Images\Locations\ElderPeaks.png" />
     <None Remove="Images\Locations\Guild.png" />
@@ -26,8 +32,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Font\pixeled.ttf" />
     <Resource Include="Images\Background\game background 1.jpeg" />
     <Resource Include="Images\Characters\Auswi.png" />
+    <Resource Include="Images\GameItems\img_boots.png" />
+    <Resource Include="Images\GameItems\img_chestplate.png" />
+    <Resource Include="Images\GameItems\img_gloves.png" />
+    <Resource Include="Images\GameItems\img_helmet.png" />
     <Resource Include="Images\Locations\CropFarm.png" />
     <Resource Include="Images\Locations\ElderPeaks.png" />
     <Resource Include="Images\Locations\Guild.png" />
