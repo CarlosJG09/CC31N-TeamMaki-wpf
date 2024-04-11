@@ -16,7 +16,7 @@ namespace Engine.Models
             MinimumDamage = minimumDamage;
             MaximumDamage = maximumDamage;
         }
-        public override Weapon Clone()
+        public new Weapon Clone()
         {
             return new Weapon(ItemTypeID, Name, Price, ImageName, MaximumDamage, MaximumDamage);
         }

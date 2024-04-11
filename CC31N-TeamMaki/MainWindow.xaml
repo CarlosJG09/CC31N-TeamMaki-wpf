@@ -98,10 +98,18 @@
         <Label Grid.Row="0" Grid.Column="0" Content="Menu" Background="AliceBlue" Grid.ColumnSpan="3"/>
 
         <Grid Grid.Row="2" Grid.Column="0">
-            <Label Grid.Row="0" Grid.Column="0" Content="Inventoy And Quest"/>
             <Border BorderBrush="LightGray" BorderThickness="1" Margin="2"/>
-        </Grid>
 
+            <TabControl>
+                <TabItem Header="Inventory">
+                    <DataGrid ItemsSource = "{Binding CurrentPlayer.Inventory}">
+                        
+
+                    </DataGrid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+        
         <Grid Grid.Row="1" Grid.Column="1">
             <Label Grid.Row="1" Grid.Column="1" Content="Game Messages"/>
             <Border BorderBrush="LightGray" BorderThickness="1" Margin="2"/>

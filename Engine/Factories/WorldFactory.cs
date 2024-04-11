@@ -9,7 +9,7 @@ namespace Engine.Factories
 {
     internal class WorldFactory
     {
-        public World CreateWorld()
+        public static World CreateWorld()
         {
             World newWorld = new World();
             newWorld.AddLocation(0, 0, "Kaps Village", "A quaint village nestled amidst lush greenery, Kaps Village serves as the humble home of our hero, Auswi.",
