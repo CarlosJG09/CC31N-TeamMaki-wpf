@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -28,6 +29,8 @@ namespace Engine.ViewModels
                 OnpropertyChanged(nameof(HasLocationToWest));
                 OnpropertyChanged(nameof(HasLocationToEast));
                 OnpropertyChanged(nameof(HasLocationToSouth));
+
+                GivePlayerQuestAtLocation();
             }
         }
         public bool HasLocationToNorth 
@@ -73,6 +76,7 @@ namespace Engine.ViewModels
                 ExperiencePoints = 0,
                 Level = 1,
                 Crystalshards = 0,
+               
 
             };
         
@@ -80,6 +84,7 @@ namespace Engine.ViewModels
             CurrentWorld = WorldFactory.CreateWorld();
             CurrentLocation = CurrentWorld.LocationAt(0, 0);
 
+           
         }
        
         public void MoveNorth()
@@ -108,6 +113,18 @@ namespace Engine.ViewModels
            if (HasLocationToSouth)
             {
                 CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate - 1);
+            }
+        }
+
+        private void GivePlayerQuestAtLocation()
+        {
+            foreach (Quest quest in CurrentLocation.QuestsAvailableHere) 
+            {
+                if (!CurrentPlayer.Quests.Any(q => q.PlayerQuest.ID == quest.ID)) 
+                {
+                    CurrentPlayer.Quests.Add(new QuestStatus(quest));   
+                }
+
             }
         }
 

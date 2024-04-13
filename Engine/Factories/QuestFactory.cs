@@ -7,98 +7,79 @@ using System.Threading.Tasks;
 
 namespace Engine.Factories
 {
-    public class QuestFactory
+    internal static  class QuestFactory
     {
-        private static List<Quest> _quest;
+        private static List<Quest> _quest = new List<Quest>();
         static QuestFactory()
         {
-            _quest = new List<Quest>
-            {
-                new Quest
-                {
-                    ID = 1,
-                    Name = "Quest from the Mayor of Kaps Village",
-                    Description =" Slay 3 Goblins in the Wicked Forest.",
-                    ItemsToComplete = new List<ItemQuantity>
-                    {
-                        new ItemQuantity {},
-                        new ItemQuantity {}
-                   
-                    },
-                    ExpPoints = 100,
-                    Gold = 30,
-                    RewardItems = new List<ItemQuantity>
-                    {
-                        new ItemQuantity {ItemID = 103, Quantity = 1},
-                        new ItemQuantity {ItemID = 1001, Quantity = 1}
+            List<ItemQuantity> itemsToComplete = new List<ItemQuantity>();
+            List<ItemQuantity> rewardItems = new List<ItemQuantity>();
 
-                    }
-                }, 
-                new Quest
-                {
-                    ID = 2,
-                    Name = "Quests from Guild Dulenar",
-                    Description =" Slay 5 Goblins and 5 Ghouls",
-                    ItemsToComplete = new List<ItemQuantity>
-                    {
-                        new ItemQuantity {},
-                        new ItemQuantity {}
-                   
-                    },
-                    ExpPoints = 100,
-                    Gold = 50,
-                    RewardItems = new List<ItemQuantity>
-                    {
-                         new ItemQuantity {ItemID = 102, Quantity = 1},
-                        new ItemQuantity {ItemID = 1002, Quantity = 1}                     
-                    }
-                    
-                },  new Quest
-                {
-                    ID = 3,
-                    Name = "Quests from Guild Dulenar 2",
-                    Description ="Slay 2 Giants and 2 Witches ",
-                    ItemsToComplete = new List<ItemQuantity>
-                    {
-                        new ItemQuantity {},
-                        new ItemQuantity {}
-                   
-                    },
-                    ExpPoints = 100,
-                    Gold = 80,
-                    RewardItems = new List<ItemQuantity>
-                    {
-                        new ItemQuantity { ItemID = 105, Quantity =1},
-                        new ItemQuantity { ItemID = 1003, Quantity =1},
+            itemsToComplete.Add(new ItemQuantity(201, 2));
+            rewardItems.Add(new ItemQuantity(1004, 1));
 
-                    }
-                    
-                }, 
-                new Quest
-                {
-                    ID = 4,
-                    Name = "Quest from the Farmer in Haven Village",
-                    Description ="Slay goblins and orcs destroying the crops. ",
-                    ItemsToComplete = new List<ItemQuantity>
-                    {
-                        new ItemQuantity {},
-                        new ItemQuantity {}
-                   
-                    },
-                    ExpPoints = 100,
-                    Gold = 80,
-                    RewardItems = new List<ItemQuantity>
-                    {
-                        new ItemQuantity {ItemID = 101, Quantity = 1},
-                        new ItemQuantity {ItemID = 1004, Quantity = 1},
-                    }
-                },
-            };
+            _quest.Add (new Quest(1 ,
+                                  "Quest from the Mayor of Kaps Village",
+                                  "Slay 3 Goblins in the Wicked Forest",
+                                  itemsToComplete,
+                                  50, 30,
+                                  rewardItems));
 
+            List<ItemQuantity> itemsToComplete1 = new List<ItemQuantity>();
+            List<ItemQuantity> rewardItems1 = new List<ItemQuantity>();
+
+            itemsToComplete1.Add(new ItemQuantity (202, 2));
+            rewardItems1.Add(new ItemQuantity (105, 1));
+
+
+            _quest.Add(new Quest(2,
+                                 "Quest from the Merchant",
+                                 "Slay 5 ghouls in Shadow Forest ",
+                                 itemsToComplete,
+                                 100, 30,
+                                 rewardItems));
+
+            List<ItemQuantity> itemsToComplete2 = new List<ItemQuantity>();
+            List<ItemQuantity> rewardItems2 = new List<ItemQuantity>();
+
+            itemsToComplete2.Add(new ItemQuantity(204, 2));
+            rewardItems2.Add(new ItemQuantity(101, 2));
+            _quest.Add(new Quest(3,
+                                 "Quest from Merchant",
+                                 "Slay 5 Orcs in MarshLands",
+                                 itemsToComplete,
+                                 150, 50,
+                                 rewardItems));
+
+            List<ItemQuantity> itemsToComplete3 = new List<ItemQuantity>();
+            List<ItemQuantity> rewardItems3 = new List<ItemQuantity>();
+
+            itemsToComplete3.Add(new ItemQuantity(203, 2));
+            rewardItems3.Add(new ItemQuantity(103, 1));
+
+            _quest.Add(new Quest(4,
+                                 "Quest from Wanderer",
+                                 "Slay 3 Witches Elder Peaks",
+                                 itemsToComplete,
+                                 125, 35,
+                                 rewardItems));
+
+            List<ItemQuantity> itemsToComplete4 = new List<ItemQuantity>();
+            List<ItemQuantity> rewardItems4 = new List<ItemQuantity>();
+
+            itemsToComplete4.Add(new ItemQuantity(205, 1));
+            rewardItems4.Add(new ItemQuantity(1003, 1));
+            _quest.Add(new Quest(5,
+                                 "Quest from farmer",
+                                 "Slay 2 Giants in CropFarm",
+                                 itemsToComplete,
+                                 200, 50,
+                                 rewardItems));
         }
-         public static Quest GetQuestID (int questID)
+
+         public static Quest GetQuestID (int id)
         {
-            return _quest.Find(qi => qi.ID == questID);
+            return _quest.FirstOrDefault(quest => quest.ID == id);
         }
     }
 }

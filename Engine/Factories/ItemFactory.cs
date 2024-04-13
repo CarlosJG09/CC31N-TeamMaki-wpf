@@ -17,28 +17,37 @@ namespace Engine.Factories
            
             {
                 _gameitems = new List<GameItem>();
-                new GameItem(101, "Health Potion", 20.0,"pack://application:,,,/Engine;component/Images/GameItems/health potion.png" );
-                new GameItem(102, "Armor Helmet", 25.0, "pack://application:,,,/Engine;component/Images/GameItems/img_helmet.png");
-                new GameItem(103, "Leather Boots", 15.0, "pack://application:,,,/Engine;component/Images/GameItems/img_boots.png");
-                new GameItem(104, "Armor Chestplate", 30.0, "pack://application:,,,/Engine;component/Images/GameItems/img_chestplate.png");
-                new GameItem(105, "gloves", 10.0, "pack://application:,,,/Engine;component/Images/GameItems/img_gloves.png");             
+                _gameitems.Add (new GameItem(101, "Health Potion", 20.0,"pack://application:,,,/Engine;component/Images/GameItems/health potion.png" ));
+                _gameitems.Add (new GameItem(102, "Armor Helmet", 25.0, "pack://application:,,,/Engine;component/Images/GameItems/img_helmet.png"));
+                _gameitems.Add (new GameItem(103, "Leather Boots", 15.0, "pack://application:,,,/Engine;component/Images/GameItems/img_boots.png"));
+                _gameitems.Add (new GameItem(104, "Armor Chestplate", 30.0, "pack://application:,,,/Engine;component/Images/GameItems/img_chestplate.png"));
+                _gameitems.Add (new GameItem(105, "gloves", 10.0, "pack://application:,,,/Engine;component/Images/GameItems/img_gloves.png"));  
+                
+                _gameitems.Add (new GameItem(201, "Goblins tooth", 5.0, "C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\GameItems\\goblins tooth.png"));             
+                _gameitems.Add (new GameItem(202, "Ghouls eye", 10.0, "C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\GameItems\\ghoul eye.png"));             
+                _gameitems.Add (new GameItem(203, "Witches Hat", 10.0, "C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\GameItems\\witches hat.png"));             
+                _gameitems.Add (new GameItem(204, "Orc Tusk", 15.0, "C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\GameItems\\ork tusk.png"));             
+                _gameitems.Add (new GameItem(205, "Giants Hand", 20.0, "C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\GameItems\\giant's hand.png"));             
+
 
                 _gameitems.Add(new Weapon(1001, "Iron Sword", 30.0, "pack://application:,,,/Engine;component/Images/GameItems/iron sword.png", 5, 10));
                 _gameitems.Add( new Weapon(1002, "Wooden Bow", 40.0, "pack://application:,,,/Engine;component/Images/GameItems/wooden bow.png", 5, 10));
                 _gameitems.Add(new Weapon(1003, "Iron Axe", 45.0, "pack://application:,,,/Engine;component/Images/GameItems/iron axe.png", 5, 10));
                 _gameitems.Add(new Weapon(1004, "Dagger", 25.0, "pack://application:,,,/Engine;component/Images/GameItems/dagger.png", 5, 10));
                 _gameitems.Add(new Weapon(1005, "Iron Spear", 60.0, "pack://application:,,,/Engine;component/Images/GameItems/iron spear.png", 5, 10));
+
+                
             }                                                                     
         }
                      
         public static GameItem CreateGameItem(int itemTypeID)
         {
 
-            GameItem gameitems = _gameitems.FirstOrDefault(item => item.ItemTypeID == itemTypeID);
+            GameItem gameitem = _gameitems.FirstOrDefault(item => item.ItemTypeID == itemTypeID);
 
-            if (gameitems != null)
+            if (gameitem != null)
             {
-                return gameitems.Clone();
+                return gameitem.Clone();
             }
             return null;
                   
