@@ -34,6 +34,11 @@
     <None Remove="Images\GameItems\iron spear.png" />
     <None Remove="Images\GameItems\iron sword.png" />
     <None Remove="Images\GameItems\wooden bow.png" />
+    <None Remove="Images\Monsters\gaint.png" />
+    <None Remove="Images\Monsters\ghoul.png" />
+    <None Remove="Images\Monsters\goblin.png" />
+    <None Remove="Images\Monsters\orc.png" />
+    <None Remove="Images\Monsters\witches.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -63,6 +68,11 @@
     <Resource Include="Images\GameItems\iron spear.png" />
     <Resource Include="Images\GameItems\iron sword.png" />
     <Resource Include="Images\GameItems\wooden bow.png" />
+    <Resource Include="Images\Monsters\gaint.png" />
+    <Resource Include="Images\Monsters\ghoul.png" />
+    <Resource Include="Images\Monsters\goblin.png" />
+    <Resource Include="Images\Monsters\orc.png" />
+    <Resource Include="Images\Monsters\witches.png" />
   </ItemGroup>
 
 </Project>
