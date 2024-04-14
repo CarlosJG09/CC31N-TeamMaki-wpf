@@ -15,7 +15,7 @@ namespace Engine.Factories
             {
                 case 1:
                     Monster goblin =
-                        new Monster("Goblin", "pack://application:,,,/Engine;component/Images/Locations/Marshlands.png/goblin.png",
+                        new Monster("Goblin", "C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\Monsters\\goblin.png",
                                     5, 2, 10, 3);
                     AddLootItem(goblin, 201, 70);
                     AddLootItem(goblin, 101, 40);
@@ -24,7 +24,7 @@ namespace Engine.Factories
 
                 case 2:
                     Monster ghoul =
-                        new Monster("Ghoul", " pack://application:,,,/Engine;component/Images/Locations/ghoul.png", 8, 3, 15, 5);
+                        new Monster("Ghoul", "C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\Monsters\\ghoul.png", 8, 3, 15, 5);
                     AddLootItem(ghoul, 202, 75);
                     AddLootItem(ghoul, 101, 40);
                     AddLootItem(ghoul, 1004, 40);
@@ -32,7 +32,7 @@ namespace Engine.Factories
 
                 case 3:
                     Monster witches =
-                        new Monster("Witch", " pack://application:,,,/Engine;component/Images/Locations/witches.png", 10, 5, 18, 5);
+                        new Monster("Witch", " C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\Monsters\\witches.png", 10, 5, 18, 5);
                     AddLootItem(witches, 203, 75);
                     AddLootItem(witches, 1004, 40);
                     AddLootItem(witches, 102, 10);
@@ -41,7 +41,7 @@ namespace Engine.Factories
 
                 case 4:
                     Monster orc =
-                        new Monster("Orc", " pack://application:,,,/Engine;component/Images/Locations/orc.png", 12, 6, 20, 5);
+                        new Monster("Orc", " C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\Monsters\\orc.png", 12, 6, 20, 5);
                     AddLootItem(orc, 204, 75);
                     AddLootItem(orc,1002 , 20);
                     AddLootItem(orc,101 , 20);
@@ -49,7 +49,7 @@ namespace Engine.Factories
 
                 case 5:
                     Monster giant =
-                        new Monster("Giant", " pack://application:,,,/Engine;component/Images/Locations/giant.png", 15, 9, 25, 8);
+                        new Monster("Giant", "C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\Monsters\\gaint.png", 15, 9, 25, 8);
                     AddLootItem(giant, 205, 75);
                     AddLootItem(giant, 104, 20);
                     AddLootItem(giant, 101, 20);

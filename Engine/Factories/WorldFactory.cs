@@ -17,7 +17,9 @@ namespace Engine.Factories
 
             newWorld.AddLocation(0, -1, "Wicked Forest", "Dark and foreboding, the Wicked Forest is overrun by goblins, who have made it their domain.",
                 "pack://application:,,,/Engine;component/Images/Locations/WickedForest.png");
+
             newWorld.LocationAt(0, -1).QuestsAvailableHere.Add(QuestFactory.GetQuestID(1));
+            newWorld.LocationAt(0, -1).AddMonster(1, 25);
 
             newWorld.AddLocation(1, 0, "Guild Dulenar", "A bustling hub of activity, Guild Dulenar is where adventurers like Auswi trade crystal shards for gold coins.",
                 "pack://application:,,,/Engine;component/Images/Locations/Guild.png");
@@ -27,22 +29,26 @@ namespace Engine.Factories
 
             newWorld.AddLocation(2, 0, "Shadow Forest", "Shrouded in darkness, Shadow Forest is infested with goblins and ghouls, posing a constant threat to travelers.",
               "pack://application:,,,/Engine;component/Images/Locations/ShadowForest.png");
-            newWorld.LocationAt(0, -1).QuestsAvailableHere.Add(QuestFactory.GetQuestID(2));
+            newWorld.LocationAt(2, 0).QuestsAvailableHere.Add(QuestFactory.GetQuestID(2));
+            newWorld.LocationAt(2, 0).AddMonster(2, 25);
 
             newWorld.AddLocation(2, -1, "Marshlands", "A murky expanse of swamps and marshes, this treacherous terrain is home to orcs and witches.",
               "pack://application:,,,/Engine;component/Images/Locations/Marshlands.png");
-            newWorld.LocationAt(0, -1).QuestsAvailableHere.Add(QuestFactory.GetQuestID(3));
+            newWorld.LocationAt(2, -1).QuestsAvailableHere.Add(QuestFactory.GetQuestID(3));
+            newWorld.LocationAt(2, -1).AddMonster(3, 25);
 
             newWorld.AddLocation(1, 1, "Elder Peaks", "Towering mountains and treacherous cliffs define the landscape of Elder Peaks, inhabited by formidable giants and cunning witches.",
               "pack://application:,,,/Engine;component/Images/Locations/ElderPeaks.png");
-            newWorld.LocationAt(0, -1).QuestsAvailableHere.Add(QuestFactory.GetQuestID(4));
+            newWorld.LocationAt(1, 1).QuestsAvailableHere.Add(QuestFactory.GetQuestID(4));
+            newWorld.LocationAt(1, 1).AddMonster(4, 25);
 
             newWorld.AddLocation(2, 1, " Haven Village", " A serene haven amidst the chaos of the outside world, Haven Village offers respite and comfort to weary travelers.",
               "pack://application:,,,/Engine;component/Images/Locations/HavenVillage.png");
 
             newWorld.AddLocation(3, 1, "Crop Farm", "Fields of lush green crops stretch as far as the eye can see in the Crop Farm, tended by hardworking farmers.",
               "pack://application:,,,/Engine;component/Images/Locations/CropFarm.png");
-            newWorld.LocationAt(0, -1).QuestsAvailableHere.Add(QuestFactory.GetQuestID(5));
+            newWorld.LocationAt(3, 1).QuestsAvailableHere.Add(QuestFactory.GetQuestID(5));
+            newWorld.LocationAt(3, 1).AddMonster(5, 25);
 
             return newWorld;
         }
