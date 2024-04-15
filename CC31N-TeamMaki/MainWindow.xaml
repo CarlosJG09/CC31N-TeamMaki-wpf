@@ -7,7 +7,7 @@
         d:DataContext="{d:DesignInstance viewModels:GameSessions}"
         xmlns:local="clr-namespace:CC31N_TeamMaki"
         mc:Ignorable="d"
-        FontSize="12"
+        FontSize="15"
         FontFamily="Comic Sans MS"
         Title="MainWindow" Height = "768" Width="1024">
     <Window.Resources>
@@ -74,25 +74,29 @@
             </Grid>
 
             <!-- Player Image -->
-            <Grid Grid.Row="1" Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width ="*"/>
-                </Grid.ColumnDefinitions>
+            <Border Grid.Row="1" Grid.Column="0"
+                    BorderBrush="LightGray"
+                    BorderThickness="2">
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width ="*"/>
+                    </Grid.ColumnDefinitions>
 
-                <Image Grid.Row="1"
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        Height="150"
-                        Width="126"
-                        Source="C:\Users\Win10\Documents\CC3\CC31N- TeamMaki-wpf\Engine\Images\Characters\Auswi.png" />
-                <Border BorderBrush="LightGray" BorderThickness="1" Margin="2"/>
-                <Label Grid.Row="0" Grid.Column="0"  Content="Player Image"/>
-            </Grid>
+                    <Image Grid.Row="1"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Height="150"
+                           Width="126"
+                           Source="C:\Users\Win10\Documents\CC3\CC31N- TeamMaki-wpf\Engine\Images\Characters\Auswi.png" />
+                    <Label Grid.Row="0" Grid.Column="0"  Content="Player Image"/>
+                </Grid>
+
+            </Border>
         </Grid>
 
         <!-- Inventory and Quest -->
@@ -131,12 +135,22 @@
                 </TabItem>
             </TabControl>
         </Grid>
-
-        <Grid Grid.Row="1" Grid.Column="1">
-            <Border BorderBrush="LightGray" BorderThickness="1" Margin="2"/>
-            <Label Grid.Row="1" Grid.Column="1" Content="Game Messages"/>
-
-        </Grid>
+        <!-- Game Messages -->
+        <Border Grid.Row="1" Grid.Column="1" 
+                    BorderBrush="LightGray"
+                    
+                Grid.RowSpan="2">
+                   
+                <RichTextBox x:Name= "GameMessages"
+                             VerticalScrollBarVisibility="Auto">
+                    <RichTextBox.Resources>
+                        <Style TargetType="{x:Type Paragraph}">
+                            <Setter Property="Margin" Value="0"/>
+                        </Style>
+                    </RichTextBox.Resources>
+                </RichTextBox>
+             
+        </Border>
 
         <!-- Item and Action -->
         <Grid Grid.Row="2" Grid.Column="1">
