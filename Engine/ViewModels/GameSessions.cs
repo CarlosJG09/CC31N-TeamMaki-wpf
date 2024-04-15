@@ -53,7 +53,7 @@ namespace Engine.ViewModels
                 if (CurrentMonster != null)
                 {
                     RaiseMessage("");
-                    RaiseMessage($"You see aa {CurrentMonster.Name} here!");
+                    RaiseMessage($"You see an {CurrentMonster.Name} here!");
                 }
             }
         }
