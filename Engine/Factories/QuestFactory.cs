@@ -43,7 +43,7 @@ namespace Engine.Factories
             List<ItemQuantity> rewardItems2 = new List<ItemQuantity>();
 
             itemsToComplete2.Add(new ItemQuantity(204, 2));
-            rewardItems2.Add(new ItemQuantity(101, 2));
+            rewardItems2.Add(new ItemQuantity(102, 2));
             _quest.Add(new Quest(3,
                                  "Quest from Merchant",
                                  "Slay 5 Orcs in MarshLands",

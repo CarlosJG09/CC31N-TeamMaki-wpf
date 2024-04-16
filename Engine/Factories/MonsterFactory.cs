@@ -15,8 +15,8 @@ namespace Engine.Factories
             {
                 case 1:
                     Monster goblin =
-                        new Monster("Goblin", "C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\Monsters\\goblin.png",
-                                    5, 2, 10, 3);
+                        new Monster("Goblin", "goblin.png",
+                                    4, 4, 3, 2, 10, 3);
                     AddLootItem(goblin, 201, 70);
                     AddLootItem(goblin, 101, 40);
 
@@ -24,7 +24,8 @@ namespace Engine.Factories
 
                 case 2:
                     Monster ghoul =
-                        new Monster("Ghoul", "C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\Monsters\\ghoul.png", 8, 3, 15, 5);
+                        new Monster("Ghoul", "ghoul.png",
+                        6, 6, 2, 5, 15, 5);
                     AddLootItem(ghoul, 202, 75);
                     AddLootItem(ghoul, 101, 40);
                     AddLootItem(ghoul, 1004, 40);
@@ -32,7 +33,8 @@ namespace Engine.Factories
 
                 case 3:
                     Monster witches =
-                        new Monster("Witch", " C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\Monsters\\witches.png", 10, 5, 18, 5);
+                        new Monster("Witch", "witches.png",
+                        6, 6, 2, 5, 18, 5);
                     AddLootItem(witches, 203, 75);
                     AddLootItem(witches, 1004, 40);
                     AddLootItem(witches, 102, 10);
@@ -41,7 +43,8 @@ namespace Engine.Factories
 
                 case 4:
                     Monster orc =
-                        new Monster("Orc", " C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\Monsters\\orc.png", 12, 6, 20, 5);
+                        new Monster("Orc", "orc.png", 
+                        7, 7, 2, 5, 20, 5);
                     AddLootItem(orc, 204, 75);
                     AddLootItem(orc,1002 , 20);
                     AddLootItem(orc,101 , 20);
@@ -49,7 +52,8 @@ namespace Engine.Factories
 
                 case 5:
                     Monster giant =
-                        new Monster("Giant", "C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\Monsters\\gaint.png", 15, 9, 25, 8);
+                        new Monster("Giant", "gaint.png", 
+                        8, 8, 2, 4, 25, 8);
                     AddLootItem(giant, 205, 75);
                     AddLootItem(giant, 104, 20);
                     AddLootItem(giant, 101, 20);
@@ -64,7 +68,7 @@ namespace Engine.Factories
         {
             if (RandomNumberGenerator.NumberBetween(1, 100) <= percentage)
             {
-                monster.Inventory.Add(new ItemQuantity(itemID, 1));
+                monster.AddItemToInventory(ItemFactory.CreateGameItem(itemID));
             }
         }
     }

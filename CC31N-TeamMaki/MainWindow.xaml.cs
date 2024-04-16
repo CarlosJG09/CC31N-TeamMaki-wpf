@@ -18,12 +18,13 @@ namespace CC31N_TeamMaki;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private GameSessions _gameSessions;
+    private  GameSessions _gameSessions = new GameSessions();
     public MainWindow()
     {
         InitializeComponent();
-        _gameSessions = new GameSessions();
+     
         _gameSessions.OnMessageRaised += OnGameMessageRaised;
+
         DataContext = _gameSessions;
     }
 
@@ -45,6 +46,10 @@ public partial class MainWindow : Window
     private void OnClick_MoveSouth(object sender, RoutedEventArgs e)
     {
         _gameSessions.MoveSouth();
+    }
+    private void OnClick_AttackMonster(object sender, RoutedEventArgs e)
+    {
+        _gameSessions.AttackCurrentMonster();
     }
     private void OnGameMessageRaised (object sender, GameMessageEventArgs e)
     {

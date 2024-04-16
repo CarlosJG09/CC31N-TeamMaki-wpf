@@ -10,14 +10,14 @@ namespace Engine.Models
     {
         private List<Location> _locations = new List<Location>();
         
-        internal void AddLocation (int x, int y, string name, string description, string ImageName)
+        internal void AddLocation (int x, int y, string name, string description, string imageName)
         {
             Location location = new Location();
             location.XCoordinate = x;
             location.YCoordinate = y;
             location.Name = name;
             location.Description = description;
-            location.ImageName = ImageName;
+            location.ImageName = $"C:\\Users\\Win10\\Documents\\CC3\\CC31N- TeamMaki-wpf\\Engine\\Images\\Locations\\{imageName}";
 
             _locations.Add(location);
         }
